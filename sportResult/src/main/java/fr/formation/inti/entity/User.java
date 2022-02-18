@@ -23,7 +23,7 @@ public class User implements java.io.Serializable {
 	private Role role;
 	private String password;
 	private String email;
-	private String prénom;
+	private String prenom;
 	private String nom;
 	private Date dateNaissance;
 
@@ -35,12 +35,12 @@ public class User implements java.io.Serializable {
 		this.role = role;
 	}
 
-	public User(int idUser, Role role, String password, String email, String prénom, String nom, Date dateNaissance) {
+	public User(int idUser, Role role, String password, String email, String prenom, String nom, Date dateNaissance) {
        this.idUser = idUser;
        this.role = role;
        this.password = password;
        this.email = email;
-       this.prénom = prénom;
+       this.prenom = prenom;
        this.nom = nom;
        this.dateNaissance = dateNaissance;
     }
@@ -85,12 +85,12 @@ public class User implements java.io.Serializable {
 	}
 
 	@Column(name="prénom", length=45)
-    public String getPrénom() {
-        return this.prénom;
+    public String getPrenom() {
+        return this.prenom;
     }
 
-	public void setPrénom(String prénom) {
-        this.prénom = prénom;
+	public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
 	@Column(name = "nom", length = 45)

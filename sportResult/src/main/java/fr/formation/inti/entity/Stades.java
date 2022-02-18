@@ -19,10 +19,10 @@ public class Stades implements java.io.Serializable {
 
 	private int idstades;
 	private String names;
-	private Integer capacité;
+	private Integer capacite;
 	private Integer surface;
 	private String villes;
-	private Set<Équipes>équipeses=new HashSet<Équipes>(0);
+	private Set<Equipes>equipeses=new HashSet<Equipes>(0);
 	private Set<Matchs> matchses = new HashSet<Matchs>(0);
 
 	public Stades() {
@@ -32,13 +32,13 @@ public class Stades implements java.io.Serializable {
 		this.idstades = idstades;
 	}
 
-	public Stades(int idstades, String names, Integer capacité, Integer surface, String villes, Set<équipes> équipeses, Set<Matchs> matchses) {
+	public Stades(int idstades, String names, Integer capacite, Integer surface, String villes, Set<Equipes> equipeses, Set<Matchs> matchses) {
        this.idstades = idstades;
        this.names = names;
-       this.capacité = capacité;
+       this.capacite = capacite;
        this.surface = surface;
        this.villes = villes;
-       this.équipeses = équipeses;
+       this.equipeses = equipeses;
        this.matchses = matchses;
     }
 
@@ -63,14 +63,14 @@ public class Stades implements java.io.Serializable {
 	}
 
 	@Column(name="capacité")
-    public Integer getCapacité()
+    public Integer getCapacite()
 	{
-        return this.capacité;
+        return this.capacite;
     }
 
-	public void setCapacité(Integer capacité)
+	public void setCapacite(Integer capacite)
 	{
-        this.capacité = capacité;
+        this.capacite = capacite;
     }
 
 	@Column(name = "surface")
@@ -92,12 +92,12 @@ public class Stades implements java.io.Serializable {
 	}
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="stades")
-    public Set<Équipes> getéquipeses() {
-        return this.équipeses;
+    public Set<Equipes> getequipeses() {
+        return this.equipeses;
     }
 
-	public void setéquipeses(Set<Équipes> équipeses) {
-        this.équipeses = équipeses;
+	public void setequipeses(Set<Equipes> equipeses) {
+        this.equipeses = equipeses;
     }
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "stades")

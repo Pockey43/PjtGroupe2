@@ -1,5 +1,5 @@
 package fr.formation.inti.entity;
-// Generated 18 févr. 2022 é 08:19:10 by Hibernate Tools 3.6.0.Final
+// Generated 18 fevr. 2022 e 08:19:10 by Hibernate Tools 3.6.0.Final
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -12,16 +12,16 @@ public class MatchsId implements java.io.Serializable {
 
 	private int idMatch;
 
-	private int équipesExtérieursIdéquipes;
-     private int équipesDomicilesIdéquipes;
+	private int equipesExterieursIdequipes;
+     private int equipesDomicilesIdequipes;
 
     public MatchsId() {
     }
 
-	public MatchsId(int idMatch, int équipesExtérieursIdéquipes, int équipesDomicilesIdéquipes) {
+	public MatchsId(int idMatch, int equipesExterieursIdequipes, int equipesDomicilesIdequipes) {
        this.idMatch = idMatch;
-       this.équipesExtérieursIdéquipes = équipesExtérieursIdéquipes;
-       this.équipesDomicilesIdéquipes = équipesDomicilesIdéquipes;
+       this.equipesExterieursIdequipes = equipesExterieursIdequipes;
+       this.equipesDomicilesIdequipes = equipesDomicilesIdequipes;
     }
 
 	@Column(name = "idMatch", nullable = false)
@@ -34,21 +34,21 @@ public class MatchsId implements java.io.Serializable {
 	}
 
 	@Column(name="équipes_extérieurs_idéquipes", nullable=false)
-    public int getéquipesExtérieursIdéquipes() {
-        return this.équipesExtérieursIdéquipes;
+    public int getEquipesExterieursIdequipes() {
+        return this.equipesExterieursIdequipes;
     }
 
-	public void setéquipesExtérieursIdéquipes(int équipesExtérieursIdéquipes) {
-        this.équipesExtérieursIdéquipes = équipesExtérieursIdéquipes;
+	public void setEquipesExterieursIdequipes(int equipesExterieursIdequipes) {
+        this.equipesExterieursIdequipes = equipesExterieursIdequipes;
     }
 
 	@Column(name="équipes_domiciles_idéquipes", nullable=false)
-    public int getéquipesDomicilesIdéquipes() {
-        return this.équipesDomicilesIdéquipes;
+    public int getEquipesDomicilesIdequipes() {
+        return this.equipesDomicilesIdequipes;
     }
 
-	public void setéquipesDomicilesIdéquipes(int équipesDomicilesIdéquipes) {
-        this.équipesDomicilesIdéquipes = équipesDomicilesIdéquipes;
+	public void setEquipesDomicilesIdequipes(int equipesDomicilesIdequipes) {
+        this.equipesDomicilesIdequipes = equipesDomicilesIdequipes;
     }
 
 	public boolean equals(Object other) {
@@ -58,16 +58,16 @@ public class MatchsId implements java.io.Serializable {
 		 MatchsId castOther = ( MatchsId ) other; 
          
 		 return (this.getIdMatch()==castOther.getIdMatch())
- && (this.getéquipesExtérieursIdéquipes()==castOther.getéquipesExtérieursIdéquipes())
- && (this.getéquipesDomicilesIdéquipes()==castOther.getéquipesDomicilesIdéquipes());
+ && (this.getEquipesExterieursIdequipes()==castOther.getEquipesExterieursIdequipes())
+ && (this.getEquipesDomicilesIdequipes()==castOther.getEquipesDomicilesIdequipes());
    }
 
 	public int hashCode() {
          int result = 17;
          
          result = 37 * result + this.getIdMatch();
-         result = 37 * result + this.getéquipesExtérieursIdéquipes();
-         result = 37 * result + this.getéquipesDomicilesIdéquipes();
+         result = 37 * result + this.getEquipesExterieursIdequipes();
+         result = 37 * result + this.getEquipesDomicilesIdequipes();
          return result;
    }
 

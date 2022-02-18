@@ -20,32 +20,32 @@ public class Matchs implements java.io.Serializable {
 
 	private MatchsId id;
 	private Stades stades;
-	private Équipes équipesByéquipesDomicilesIdéquipes;
-	private Équipes équipesByéquipesExtérieursIdéquipes;
+	private Equipes equipesByEquipesDomicilesIdEquipes;
+	private Equipes equipesByEquipesExterieursIdEquipes;
 	private String dates;
 	private String scores;
 	private String horaires;
-	private Integer journée;
+	private Integer journee;
 
 	public Matchs() {
 	}
 
-	public Matchs(MatchsId id, Stades stades, Équipes équipesByéquipesDomicilesIdéquipes, équipes équipesByéquipesExtérieursIdéquipes) {
+	public Matchs(MatchsId id, Stades stades, Equipes equipesByEquipesDomicilesIdEquipes, Equipes equipesByEquipesExterieursIdEquipes) {
         this.id = id;
         this.stades = stades;
-        this.équipesByéquipesDomicilesIdéquipes = équipesByéquipesDomicilesIdéquipes;
-        this.équipesByéquipesExtérieursIdéquipes = équipesByéquipesExtérieursIdéquipes;
+        this.equipesByEquipesDomicilesIdEquipes = equipesByEquipesDomicilesIdEquipes;
+        this.equipesByEquipesExterieursIdEquipes = equipesByEquipesExterieursIdEquipes;
     }
 
-	public Matchs(MatchsId id, Stades stades, Équipes équipesByéquipesDomicilesIdéquipes, équipes équipesByéquipesExtérieursIdéquipes, String dates, String scores, String horaires, Integer journée) {
+	public Matchs(MatchsId id, Stades stades, Equipes equipesByEquipesDomicilesIdEquipes, Equipes equipesByEquipesExterieursIdEquipes, String dates, String scores, String horaires, Integer journee) {
        this.id = id;
        this.stades = stades;
-       this.équipesByéquipesDomicilesIdéquipes = équipesByéquipesDomicilesIdéquipes;
-       this.équipesByéquipesExtérieursIdéquipes = équipesByéquipesExtérieursIdéquipes;
+       this.equipesByEquipesDomicilesIdEquipes = equipesByEquipesDomicilesIdEquipes;
+       this.equipesByEquipesExterieursIdEquipes = equipesByEquipesExterieursIdEquipes;
        this.dates = dates;
        this.scores = scores;
        this.horaires = horaires;
-       this.journée = journée;
+       this.journee = journee;
     }
    
      @EmbeddedId
@@ -53,8 +53,8 @@ public class Matchs implements java.io.Serializable {
     
     @AttributeOverrides( {
         @AttributeOverride(name="idMatch", column=@Column(name="idMatch", nullable=false) ), 
-        @AttributeOverride(name="équipesExtérieursIdéquipes", column=@Column(name="équipes_extérieurs_idéquipes", nullable=false) ), 
-        @AttributeOverride(name="équipesDomicilesIdéquipes", column=@Column(name="équipes_domiciles_idéquipes", nullable=false) ) } )
+        @AttributeOverride(name="equipeByEquipeExterieursIdEquipe", column=@Column(name="Équipes_extérieurs_idÉquipes", nullable=false) ), 
+        @AttributeOverride(name="equipeByEquipeDomicilesIdEquipe", column=@Column(name="Équipes_domiciles_idÉquipes", nullable=false) ) } )
     public MatchsId getId() {
         return this.id;
     }
@@ -74,23 +74,23 @@ public class Matchs implements java.io.Serializable {
 	}
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="équipes_domiciles_idéquipes", nullable=false, insertable=false, updatable=false)
-    public Équipes getéquipesByéquipesDomicilesIdéquipes() {
-        return this.équipesByéquipesDomicilesIdéquipes;
+    @JoinColumn(name="Équipes_domiciles_idÉquipes", nullable=false, insertable=false, updatable=false)
+    public Equipes getEquipesByEquipesDomicilesIdEquipes() {
+        return this.equipesByEquipesDomicilesIdEquipes;
     }
 
-	public void setéquipesByéquipesDomicilesIdéquipes(Équipes équipesByéquipesDomicilesIdéquipes) {
-        this.équipesByéquipesDomicilesIdéquipes = équipesByéquipesDomicilesIdéquipes;
+	public void setEquipesByEquipesDomicilesIdEquipes(Equipes equipesByEquipesDomicilesIdEquipes) {
+        this.equipesByEquipesDomicilesIdEquipes = equipesByEquipesDomicilesIdEquipes;
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="équipes_extérieurs_idéquipes", nullable=false, insertable=false, updatable=false)
-    public Équipes getéquipesByéquipesExtérieursIdéquipes() {
-        return this.équipesByéquipesExtérieursIdéquipes;
+    @JoinColumn(name="Equipe_extérieurs_idEquipe", nullable=false, insertable=false, updatable=false)
+    public Equipes getEquipeByEquipeExterieursIdEquipe() {
+        return this.equipesByEquipesExterieursIdEquipes;
     }
 
-	public void setéquipesByéquipesExtérieursIdéquipes(Équipes équipesByéquipesExtérieursIdéquipes) {
-        this.équipesByéquipesExtérieursIdéquipes = équipesByéquipesExtérieursIdéquipes;
+	public void setEquipeByEquipeExterieursIdEquipe(Equipes equipesByEquipesExterieursIdEquipes) {
+        this.equipesByEquipesExterieursIdEquipes = equipesByEquipesExterieursIdEquipes;
     }
 
 	@Column(name = "Dates", length = 45)
@@ -121,12 +121,12 @@ public class Matchs implements java.io.Serializable {
 	}
 
 	@Column(name="journée")
-    public Integer getJournée() {
-        return this.journée;
+    public Integer getJournee() {
+        return this.journee;
     }
 
-	public void setJournée(Integer journée) {
-        this.journée = journée;
+	public void setJournee(Integer journee) {
+        this.journee = journee;
     }
 
 

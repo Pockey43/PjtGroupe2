@@ -1,5 +1,5 @@
 package fr.formation.inti.entity;
-// Generated 18 f�vr. 2022 � 08:19:10 by Hibernate Tools 3.6.0.Final
+// Generated 18 fEvr. 2022 E 08:19:10 by Hibernate Tools 3.6.0.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +21,7 @@ public class Ligues implements java.io.Serializable {
 	private String nom;
 	private byte[] logo;
 
-	private Set<�quipes> �quipeses = new HashSet<�quipes>(0);
+	private Set<Equipes> equipes = new HashSet<Equipes>(0);
 
     public Ligues() {
     }
@@ -30,11 +30,11 @@ public class Ligues implements java.io.Serializable {
 		this.idligues = idligues;
 	}
 
-	public Ligues(int idligues, String nom, byte[] logo, Set<�quipes> �quipeses) {
+	public Ligues(int idligues, String nom, byte[] logo, Set<Equipes> equipes) {
        this.idligues = idligues;
        this.nom = nom;
        this.logo = logo;
-       this.�quipeses = �quipeses;
+       this.equipes = equipes;
     }
 
 	@Id
@@ -67,12 +67,12 @@ public class Ligues implements java.io.Serializable {
 	}
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="ligues")
-    public Set<�quipes> get�quipeses() {
-        return this.�quipeses;
+    public Set<Equipes> getEquipes() {
+        return this.equipes;
     }
 
-	public void set�quipeses(Set<�quipes> �quipeses) {
-        this.�quipeses = �quipeses;
+	public void setEquipes(Set<Equipes> equipes) {
+        this.equipes = equipes;
     }
 
 
